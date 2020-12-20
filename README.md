@@ -2,6 +2,10 @@
 
 [Demo App](https://zealous-perlman-75ee93.netlify.app)
 
+yarn start:lambda - Starts server
+yarn start - Starts frontend
+NODE_ENV=development yarn start:lambda - Makes /graphql available on port 9000 for testing
+
 This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:
 
 
