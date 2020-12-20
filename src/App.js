@@ -1,11 +1,6 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
-import ApolloClient from "apollo-boost";
-
-const client = new ApolloClient({
-  uri: "/.netlify/functions/graphql"
-});
 
 class LambdaDemo extends Component {
   constructor(props) {
