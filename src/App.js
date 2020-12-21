@@ -38,19 +38,14 @@ const App = () => {
       <Content className="App-content">
         <Row>
           <Col span={10} offset={7}>
-            <p>This is an example React app generated with the
+            <p>This is an example React app inspired by
               <a
                 href="https://github.com/Vermonster/fhir-kit-create-react"
                 rel="noopener noreferrer"
                 target="_blank"
                 title="FHIRKit Create React App repo"> FHIRKit Create React App</a>
-              template. The generated Node.js backend uses
-              <a
-                href="https://github.com/Vermonster/fhir-kit-client"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="FHIRKit Client repo">FHIRKit Client</a>
-              to search an open FHIR server.</p>
+              template. Using a lambda serverless backend.
+            </p>
           </Col>
         </Row>
         <h2>Patient Name Search Example</h2>
