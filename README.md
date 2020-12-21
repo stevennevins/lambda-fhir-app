@@ -1,10 +1,15 @@
 # Create Lambda FHIR App
 
-## Demo
 [Demo App](https://zealous-perlman-75ee93.netlify.app)
 
+## Clone, Run, and Deployment
 
-## Create app
+#### Fast way
+
+Clone and Deploy: [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/create-react-app-lambda&utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)
+
+
+#### Step by Step
 
 Clone the repository
 
@@ -41,6 +46,19 @@ netlify dev
 The terminal will show the console.log() for the lambda server
 
 And a server with your react app will be running on port: 8888
+
+
+
+Deploy by going to [netlify](https://www.netlify.com)
+
+Create an account
+
+Push cloned repo to your github account
+
+Link to your cloned github repo in netlify
+
+Click deploy in netlify
+
 
 
 
