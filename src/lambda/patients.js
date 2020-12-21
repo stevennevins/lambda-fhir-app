@@ -1,4 +1,3 @@
-import axios from "axios";
 const fhirKitClient = require('fhir-kit-client');
 const config = { baseUrl: 'https://r3.smarthealthit.org/' };
 const client = new fhirKitClient(config);
