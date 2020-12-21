@@ -33,7 +33,7 @@ const App = () => {
   return (
     <Layout className="App">
       <Header className="App-header">
-        <h1>FHIR Kit: Create React App</h1>
+        <h1>Lambda on FHIR</h1>
       </Header>
       <Content className="App-content">
         <Row>
