@@ -27,15 +27,13 @@ Some next steps I'm thinking about:
   +---------------------+  <----'
 
 ```
+*modified from fhir-kit-create-react*
 
-## Clone, Run, and Deployment
+## Clone, Setup, Run, View, and  Deployment
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/create-react-app-lambda&utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)
+### Step by Step
 
-
-#### Step by Step
-
-Clone the repository
+#### Clone the repository
 
 ```bash
 
@@ -43,7 +41,7 @@ git clone https://github.com/stevennevins/lambda-fhir-app.git
 
 ```
 
-You will need the netlify-cli installed globally
+#### You will need the netlify-cli installed globally
 
 ```bash
 
@@ -51,7 +49,7 @@ npm install netlify-cli -g
 
 ```
 
-Enter repo directory
+#### Enter repo directory
 
 ```bash
 
@@ -59,7 +57,7 @@ cd lambda-fhir-app
 
 ```
 
-Install dependencies
+#### Install dependencies
 
 ```bash
 
@@ -67,7 +65,7 @@ yarn install
 
 ```
 
-Run the application in development
+#### Run the application in development
 
 ```bash
 
@@ -75,9 +73,11 @@ netlify dev
 
 ```
 
+#### View
+
 The terminal will show the console.log() for the lambda server
 
-And a server with your react app will be running on port: 8888
+You can view the project locally via Netlify Dev, via `localhost:8888`.
 
 #### Deploy
 
