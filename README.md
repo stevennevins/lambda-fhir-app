@@ -71,19 +71,13 @@ The terminal will show the console.log() for the lambda server
 
 And a server with your react app will be running on port: 8888
 
+#### Deploy
 
+ - Go to [netlify](https://www.netlify.com) and create account
 
-Deploy by going to [netlify](https://www.netlify.com)
+ - Push cloned repo to your github account
 
-Create an account
-
-Push cloned repo to your github account
-
-Link to your cloned github repo in netlify
-
-Click deploy in netlify
-
-
+ - On Netlify link github repo and the app will deploy after changes are pushed
 
 
 # Below is the original Netlify Lambda React app repo readme
