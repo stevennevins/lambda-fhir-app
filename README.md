@@ -40,8 +40,9 @@ Some next steps I'm thinking about:
 git clone https://github.com/stevennevins/lambda-fhir-app.git
 
 ```
+#### Setup
 
-#### You will need the netlify-cli installed globally
+You will need the netlify-cli installed globally
 
 ```bash
 
@@ -49,7 +50,7 @@ npm install netlify-cli -g
 
 ```
 
-#### Enter repo directory
+Enter repo directory
 
 ```bash
 
@@ -57,7 +58,7 @@ cd lambda-fhir-app
 
 ```
 
-#### Install dependencies
+Install dependencies
 
 ```bash
 
