@@ -1,7 +1,8 @@
 ## Create-React-App-Lambda
 
 [Demo App](https://zealous-perlman-75ee93.netlify.app)
-
+You need: npm install netlify-cli -g
+Run netlify dev in the project to start the lambda server and frontend
 yarn start:lambda - Starts server
 yarn start - Starts frontend
 NODE_ENV=development yarn start:lambda - Makes /graphql available on port 9000 for testing

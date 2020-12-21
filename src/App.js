@@ -1,50 +1,94 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React, { useState } from 'react';
+import { Layout, Input, List, Card, Row, Col, Spin } from 'antd';
+import Patient from './Patient';
+import './App.css';
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
+const { Header, Content } = Layout;
+const Search = Input.Search;
+
+const App = () => {
+  const [ loading, setLoading ] = useState(false);
+  const [ patients, setPatients ] = useState([]);
+  const [ searchResolved, setSearchResolved ] = useState(false);
+
+  const searchPatientNames = (name) => {
+    setLoading(true);
+    setSearchResolved(false);
+
+    fetch(`/.netlify/functions/patients?name=${name}`)
+    .then((response) => (
+      response.json()
+    ))
+    .then((patients) => {
+      setPatients(patients || []);
+      setLoading(false);
+      setSearchResolved(true);
+    })
+    .catch((err) => {
+      console.log(err);
+      setLoading(false);
+    })
   }
 
-  handleClick = api => e => {
-    e.preventDefault()
+  return (
+    <Layout className="App">
+      <Header className="App-header">
+        <h1>FHIR Kit: Create React App</h1>
+      </Header>
+      <Content className="App-content">
+        <Row>
+          <Col span={10} offset={7}>
+            <p>This is an example React app generated with the
+              <a
+                href="https://github.com/Vermonster/fhir-kit-create-react"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="FHIRKit Create React App repo"> FHIRKit Create React App</a>
+              template. The generated Node.js backend uses
+              <a
+                href="https://github.com/Vermonster/fhir-kit-client"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="FHIRKit Client repo">FHIRKit Client</a>
+              to search an open FHIR server.</p>
+          </Col>
+        </Row>
+        <h2>Patient Name Search Example</h2>
+        <Search
+          className="App-search"
+          placeholder="Search Patient Names"
+          enterButton="Search"
+          size="large"
+          onSearch={searchPatientNames}
+        />
+        { loading ? (
+            <Row type="flex" justify="center">
+              <Col span={4}>
+                <Spin/>
+              </Col>
+            </Row>
+          ) : (
+            <List
+              className="App-list"
+              grid={{ gutter: 16, column: 2 }}
+              dataSource={patients}
+              locale={searchResolved ? { emptyText: 'No results found.' } : { emptyText: '' }}
+              renderItem={patient => (
+                <List.Item>
+                  <Card title={patient.name}>
+                  <Patient
+                    id={patient.id}
+                    name={patient.name}
+                    birthDate={patient.birthDate}
+                    gender={patient.gender} />
+                  </Card>
+                </List.Item>
+              )}
+            />
+        ) }
+      </Content>
+    </Layout>
+  );
+};
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
-}
-
-export default App
+export default App;
