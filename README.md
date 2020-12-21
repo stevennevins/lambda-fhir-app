@@ -51,6 +51,14 @@ npm install netlify-cli -g
 
 ```
 
+Enter repo directory
+
+```bash
+
+cd lambda-fhir-app
+
+```
+
 Install dependencies
 
 ```bash
