@@ -1,12 +1,52 @@
-## Create-React-App-Lambda
+# Create Lambda FHIR App
 
+## Demo
 [Demo App](https://zealous-perlman-75ee93.netlify.app)
-You need: npm install netlify-cli -g
-Run netlify dev in the project to start the lambda server and frontend
-yarn start:lambda - Starts server
-yarn start - Starts frontend
-NODE_ENV=development yarn start:lambda - Makes /graphql available on port 9000 for testing
-yarn build - build front end and backend
+
+
+## Create app
+
+Clone the repository
+
+```bash
+
+git clone https://github.com/stevennevins/lambda-fhir-app.git
+
+```
+
+You will need the netlify-cli installed globally
+
+```bash
+
+npm install netlify-cli -g
+
+```
+
+Install dependencies
+
+```bash
+
+yarn install
+
+```
+
+Run the application in development
+
+```bash
+
+netlify dev
+
+```
+
+The terminal will show the console.log() for the lambda server
+
+And a server with your react app will be running on port: 8888
+
+
+
+# Below is the original Netlify Lambda React app repo readme
+
+## Create-React-App-Lambda
 
 This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:
 
