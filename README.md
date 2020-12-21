@@ -2,6 +2,32 @@
 
 [Demo App](https://lambda-on-fhir.netlify.app)
 
+This repo uses a backend for frontend design.
+
+Some next steps I'm thinking about:
+ - Frontend additions
+ - 0Auth2 with lambda
+ - Apollo and GraphQL to handle multiple data sources
+
+```
+  +------------------+
+  |      EHR         |
+  |..................|
+  |   FHIR |  OAuth2 |
+  +------------------+
+           :
+           : (FHIR)
+           :
+  +---------------------+  <----.
+  | serverless (lambda) |       |
+  +.....................+       |
+           :              this template (BFF) 
+  +.....................+       |
+  |    Client (React)   |       |
+  +---------------------+  <----'
+
+```
+
 ## Clone, Run, and Deployment
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/create-react-app-lambda&utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)
