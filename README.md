@@ -65,7 +65,7 @@ yarn install
 
 ```
 
-#### Run the application in development
+#### Run the application
 
 ```bash
 
