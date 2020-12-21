@@ -1,6 +1,6 @@
 # Create Lambda FHIR App
 
-[Demo App](https://zealous-perlman-75ee93.netlify.app)
+[Demo App](https://lambda-on-fhir.netlify.app)
 
 ## Clone, Run, and Deployment
 
