@@ -1,6 +1,5 @@
 import React from "react";
 import FhirClientProvider from "./FhirClientProvider";
-import Chart from "./Chart";
 import Patient from "./Patient";
 
 /**
@@ -12,8 +11,6 @@ export default function Page() {
         <FhirClientProvider>
             <Patient />
             <hr />
-            <Chart />
-            <br />
         </FhirClientProvider>
     );
 }
