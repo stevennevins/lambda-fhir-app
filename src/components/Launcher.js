@@ -21,6 +21,7 @@ export default class Launcher extends React.Component {
             clientId: "my-client-id",
             scope: "launch launch/patient patient/read offline_access",
             redirectUri: "./app",
+            // fhirServiceUrl:"https://r3.smarthealthit.org/",
             iss:
                 "https://launch.smarthealthit.org/v/r3/sim/" +
                 "eyJoIjoiMSIsImIiOiJmMDQ2MjkzNi1lYjRiLTRkYT" +
